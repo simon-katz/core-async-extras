@@ -6,6 +6,8 @@ A Clojure library designed to ... well, that part is up to you.
 
 FIXME
 
+suggest exclude org.clojure/clojure and core.async from deps
+
 ## License
 
 Copyright © 2016 FIXME
