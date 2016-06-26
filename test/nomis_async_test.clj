@@ -1,8 +1,8 @@
-(ns com.nomistech.core-async-extras-test
+(ns nomis-async-test
   (:require [clj-time.core :as t]
             [clojure.core.async :as a]
             [clj-time.coerce :as c]
-            [com.nomistech.core-async-extras :refer :all]
+            [nomis-async :refer :all]
             [midje.sweet :refer :all]))
 
 (fact "`stoppable-go-loop` should work"

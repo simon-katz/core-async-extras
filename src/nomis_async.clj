@@ -1,4 +1,4 @@
-(ns com.nomistech.core-async-extras
+(ns nomis-async
   (:require [clojure.core.async :as a]))
 
 (defn stoppable-go-loop
