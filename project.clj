@@ -1,6 +1,6 @@
-(defproject nomis-async "0.1.0-SNAPSHOT"
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
+(defproject nomis-async "0.1.1-SNAPSHOT"
+  :description "Useful things atop core.async"
+  :url "https://github.com/simon-katz/nomis-async"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.6.0"]
