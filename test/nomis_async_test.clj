@@ -8,10 +8,11 @@
 (fact "`stoppable-go-loop` should work"
   ;; TODO: Is this kind of test with timing ok? How else to do it?
   ;; Given
-  (let [frequency-ms    100
-        time-to-run-for 350
-        acc-atom        (atom [])
-        start-time      (t/now)]
+  (let [frequency-ms      100
+        time-to-run-for   350
+        test-tolerance-ms 10
+        acc-atom          (atom [])
+        start-time        (t/now)]
     ;; When
     (let [control-ch (stoppable-go-loop #(swap! acc-atom conj (t/now))
                                         frequency-ms)]
@@ -25,10 +26,10 @@
         (fact "should first call the function immediately"
           (c/to-long (first ts))
           => (roughly (c/to-long start-time)
-                      10))
+                      test-tolerance-ms))
         (fact "should call the function at intervals of `frequency-ms`, until `time-to-run-for` has elapsed"
           diffs
           => (let [expected-n-iterations (int (/ time-to-run-for
                                                  frequency-ms))]
                (just (repeat expected-n-iterations
-                             (roughly frequency-ms 10)))))))))
+                             (roughly frequency-ms test-tolerance-ms)))))))))
