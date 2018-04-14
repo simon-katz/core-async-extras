@@ -7,11 +7,6 @@ the relevant Git tag (e.g. `0.1.2`) if you need documentation for a
 specific release.**
 
 
-## Usage
-
-Add the following dependency to your project:
-
-
 ## Installation
 
 Current version:
@@ -29,6 +24,14 @@ using a dependency vector like this`:
 
 ## Usage
 
+### stoppable-go-loop
+
+This function sets up a go loop that calls a supplied function at specified
+intervals.
+It returns a control channel.
+When `:stop` is put on the control channel, exits the go loop.
+  
+
 ```
 (require '[clojure.core.async :as a])
 (require '[nomis-async :as na])
@@ -40,6 +43,7 @@ using a dependency vector like this`:
 ;; Hello
 ;; Hello
 ;; Hello
+
 (a/>!! control-ch :stop)
 ```
 
