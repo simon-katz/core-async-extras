@@ -3,10 +3,10 @@
   :url "https://github.com/simon-katz/nomis-async"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
-  :dependencies [[org.clojure/clojure "1.6.0"]
-                 [org.clojure/core.async "0.2.385"]]
+  :dependencies [[org.clojure/clojure "1.9.0"]
+                 [org.clojure/core.async "0.4.474"]]
   :profiles {:dev {:source-paths ["dev"]
                    :dependencies [[org.clojure/tools.namespace "0.2.11"]
-                                  [midje "1.7.0"]
-                                  [clj-time "0.12.0"]]
-                   :plugins [[lein-midje "3.1.3"]]}})
+                                  [midje "1.9.1"]
+                                  [clj-time "0.14.3"]]
+                   :plugins [[lein-midje "3.2.1"]]}})
