@@ -1,4 +1,4 @@
-(defproject nomis-async "0.2.1"
+(defproject nomis-async "0.2.2-SNAPSHOT"
   :description "Useful things on top of core.async"
   :url "https://github.com/simon-katz/nomis-async"
   :license {:name "Eclipse Public License"
