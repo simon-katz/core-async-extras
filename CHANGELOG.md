@@ -1,5 +1,16 @@
-# Change Log
-All notable changes to this project will be documented in this file. This change log follows the conventions of [keepachangelog.com](http://keepachangelog.com/).
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+This changelog mostly follows the conventions of
+[keepachangelog.com](http://keepachangelog.com/); it deviates from those
+conventions by not making versions and sections linkable.
+
+This project uses [semantic versioning](https://semver.org/).
+In addition, breaking changes between successive
+initial development versions (that is 0.y.z versions)
+are explicitly noted.
+
 
 ## Unreleased
 
