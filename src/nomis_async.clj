@@ -1,7 +1,7 @@
 (ns nomis-async
   (:require [clojure.core.async :as a]))
 
-(defn stoppable-go-loop
+(defn repeat-at-intervals
   "Set up a go loop that calls `f` at intervals of `frequency-ms`.
   Return a control channel.
   When `:stop` is put on the control channel, exit the go loop."

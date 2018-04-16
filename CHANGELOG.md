@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file. This change
 
 ### Added
 
-- (nothing)
+- Rename `stoppable-go-loop` -> `repeat-at-intervals`.
 
 ### Diffs
 
@@ -27,4 +27,4 @@ https://github.com/simon-katz/nomis-async/compare/0.1.2...0.1.3
 
 ### Added
 
-- Add `stoppable-go-loop`.
+- Add `repeat-at-intervals`.

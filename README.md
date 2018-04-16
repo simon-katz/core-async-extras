@@ -24,7 +24,7 @@ using a dependency vector like this`:
 
 ## Usage
 
-### stoppable-go-loop
+### repeat-at-intervals
 
 This function sets up a go loop that calls a supplied function at specified
 intervals.
@@ -36,8 +36,8 @@ When `:stop` is put on the control channel, exits the go loop.
 (require '[clojure.core.async :as a])
 (require '[nomis-async :as na])
 
-(def control-ch (na/stoppable-go-loop #(println "Hello")
-                                      1000))
+(def control-ch (na/repeat-at-intervals #(println "Hello")
+                                        1000))
 ;; Hello
 ;; Hello
 ;; Hello

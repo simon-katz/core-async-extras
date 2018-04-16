@@ -5,7 +5,7 @@
             [nomis-async :refer :all]
             [midje.sweet :refer :all]))
 
-(fact "`stoppable-go-loop` should work"
+(fact "`repeat-at-intervals` should work"
   ;; TODO: Is this kind of test with timing ok? How else to do it?
   ;; Given
   (let [frequency-ms      100
@@ -14,8 +14,8 @@
         acc-atom          (atom [])
         start-time        (t/now)]
     ;; When
-    (let [control-ch (stoppable-go-loop #(swap! acc-atom conj (t/now))
-                                        frequency-ms)]
+    (let [control-ch (repeat-at-intervals #(swap! acc-atom conj (t/now))
+                                          frequency-ms)]
       (Thread/sleep time-to-run-for)
       (a/>!! control-ch :stop)
       ;; Then
